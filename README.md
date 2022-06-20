@@ -2,7 +2,15 @@
 
 Word Unscrambler lets users provide a list of words to be unscrambled. Users can provide words manually or through a file. The process of unscrambling is based on an external file. Users have access to this file and can add or remove words as necessary.
 
+## Color Reference 	:art:
 
+  
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Black | ![#000000](https://cdn.discordapp.com/attachments/315879205818597377/988523572668543036/black.jpg) #000000 |
+| White | ![#ffffff](https://cdn.discordapp.com/attachments/315879205818597377/988525268060737667/ffffff.jpg) #FFFFFF |
+| Ghost White | ![#f3f3f4](https://cdn.discordapp.com/attachments/315879205818597377/988535835869728809/F3F3F4.jpg) #F3F3F4 |
+| Ship Grey | ![#413F49](https://cdn.discordapp.com/attachments/315879205818597377/988535835609690212/413F49.jpg) #413F49 |
 
 ## Demo :arrow_forward:
 ![gif demo](https://cdn.discordapp.com/attachments/315879205818597377/988472084420243487/demoWU.gif)
