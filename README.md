@@ -1,6 +1,6 @@
 ﻿# Word Unscrambler :star2:
 
-Word Unscrambler lets users provide a list of words to be unscrambled either manually or as a file containing them. The process of unscrambling the words based on an external file. User have access to this file and can add or remove words as necessary.
+Word Unscrambler lets users provide a list of words to be unscrambled. Users can provide words manually or through a file. The process of unscrambling is based on an external file. Users have access to this file and can add or remove words as necessary.
 
 
 
