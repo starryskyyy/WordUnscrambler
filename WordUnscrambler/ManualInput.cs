@@ -19,7 +19,7 @@ namespace WordUnscrambler
         {
             InitializeComponent();
             addManualTxtBox.Text = String.Empty;
-            //Initializing list
+            //Initializing list  
             this.inputList = new List<string>();
 
         }
@@ -73,12 +73,12 @@ namespace WordUnscrambler
 
         }
 
-        private List<string> addToTempList()
+        private List<string> addToTempList(string fileName)
         {
             List<String> temp = new List<String>(); // temporary list
             foreach (string input in inputList) // loop with words that user added
             {
-                foreach (string word in File.ReadAllLines("1000words.txt"))
+                foreach (string word in File.ReadAllLines(fileName))
                 {
                    
                     if (sameChars(input, word)) // if words contain same letters 
@@ -92,7 +92,7 @@ namespace WordUnscrambler
 
         private void printUnscrambledWords()
         {
-            List<string> li = addToTempList();
+            List<string> li = addToTempList("1000words.txt");
             foreach (string word in li) 
             {
                 listAddedWords.Items.Add("\r\n" + word); // display in the list box

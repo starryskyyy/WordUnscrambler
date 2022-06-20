@@ -57,7 +57,7 @@ namespace WordUnscrambler
 
         private void btnHomePage_Click(object sender, EventArgs e)
         {
-            // add style to a button
+            // add style to a button  
             pnlNav.Height = btnHomePage.Height;
             pnlNav.Top = btnHomePage.Top;
             pnlNav.Left = btnHomePage.Left;

@@ -17,7 +17,7 @@ namespace WordUnscrambler
         public ManageFile()
         {
             InitializeComponent();
-            WriteToList();
+            WriteToList("1000words.txt");
 
         }
 
@@ -39,32 +39,14 @@ namespace WordUnscrambler
         private void listAllWordsFile_SelectedIndexChanged(object sender, EventArgs e)
         {
             // displays all words from the file
-            WriteToList();
+            WriteToList("1000words.txt");
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            string fileName = "1000words.txt"; 
 
-            var lines = File.ReadAllLines("1000words.txt");
-
-            // check if word that user wants to add doesnt now exists and had correct format
-            if (!lines.Contains(addOrDelete.Text) && checkIfCorrectFormat())
-            {
-                
-                lines = lines.Append(addOrDelete.Text).OrderBy(line => line).ToArray(); // append to a file in asc order
-
-                File.WriteAllLines("1000words.txt", lines);
-                addOrDelete.Clear(); // clear text box 
-                errorTextBox.Text = "Word was sucessfully added!"; // success message
-                WriteToList(); // displays updated list
-
-            }
-            else if(lines.Contains(addOrDelete.Text)) // if already exists in the file - print error message
-            {
-                addOrDelete.Clear();
-                errorTextBox.Text = "*Word alreadt exists! Please, try again.";
-            }
+            addToAFile(fileName);
 
         }
 
@@ -76,9 +58,32 @@ namespace WordUnscrambler
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string fileName = "1000words.txt";
-            deleteFromFile(fileName);
+            deleteFromAFile(fileName);
         }
-        private void deleteFromFile(string fileName)
+
+        private void addToAFile(string fileName)
+        {
+            var lines = File.ReadAllLines(fileName);
+
+            // check if word that user wants to add doesnt now exists and had correct format
+            if (!lines.Contains(addOrDelete.Text) && checkIfCorrectFormat())
+            {
+
+                lines = lines.Append(addOrDelete.Text).OrderBy(line => line).ToArray(); // append to a file in asc order
+
+                File.WriteAllLines(fileName, lines);
+                addOrDelete.Clear(); // clear text box 
+                errorTextBox.Text = "Word was sucessfully added!"; // success message
+                WriteToList("1000words.txt"); // displays updated list
+
+            }
+            else if (lines.Contains(addOrDelete.Text)) // if already exists in the file - print error message
+            {
+                addOrDelete.Clear();
+                errorTextBox.Text = "*Word alreadt exists! Please, try again.";
+            }
+        }
+        private void deleteFromAFile(string fileName)
         {
             var lines = File.ReadAllLines(fileName);
 
@@ -112,7 +117,7 @@ namespace WordUnscrambler
 
                 addOrDelete.Clear();
                 errorTextBox.Text = "Word was sucessfully deleted!"; // print success message
-                WriteToList(); // display updated list
+                WriteToList("1000words.txt"); // display updated list
 
             }
             else if (checkIfCorrectFormat() == false) { }
@@ -133,13 +138,13 @@ namespace WordUnscrambler
             }
             return false;
         }
-        public void WriteToList()
+        public void WriteToList(string fileName)
         {
-            listAllWordsFile.Items.Clear();
-            StreamReader sr = new StreamReader("1000words.txt");
+            listAllWordsFile.Items.Clear(); //clear list
+            StreamReader sr = new StreamReader(fileName);
             while (!sr.EndOfStream)
             {
-                listAllWordsFile.Items.Add(sr.ReadLine());
+                listAllWordsFile.Items.Add(sr.ReadLine()); // display words in the list box
             }
             sr.Close();
 

@@ -22,7 +22,7 @@ namespace WordUnscrambler
         private void selectedFileLbl_Click(object sender, EventArgs e)
         {
 
-        }
+        } 
 
         private void errorFileOpenLbl_Click(object sender, EventArgs e)
         {
@@ -32,13 +32,14 @@ namespace WordUnscrambler
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             string path = pathToSelectedFile();
-            openFileTextBox.Text = path;
+            openFileTextBox.Text = path; // print path name in the text box
         }
 
         private string pathToSelectedFile()
         {
-            var loadDialog = new OpenFileDialog { Filter = "Text File|*.txt", InitialDirectory = @"C:\" };
-            if (loadDialog.ShowDialog() == DialogResult.OK)
+            // open file from local machine
+            var loadDialog = new OpenFileDialog { Filter = "Text File|*.txt", InitialDirectory = @"C:\" }; 
+            if (loadDialog.ShowDialog() == DialogResult.OK) 
                 filename = loadDialog.FileName;
             return filename;
         }
@@ -48,8 +49,8 @@ namespace WordUnscrambler
             // clear list with words in GUI
             listAddedWords.Items.Clear();
             label1.Text = "";
-            btnClear.ForeColor = Color.FromArgb(252, 251, 255);
-            btnClear.Text = "";
+            btnClear.ForeColor = Color.FromArgb(252, 251, 255); // set colot to the clear button
+            btnClear.Text = ""; 
             
 
         }
@@ -58,19 +59,19 @@ namespace WordUnscrambler
         {
             // clear list with words in GUI
             listAddedWords.Items.Clear();
-            printUnscrambledWords();
+            printUnscrambledWords(); // print unscrambled words
             openFileTextBox.Text = "";
             label1.Text = "Unscrambled words";
-            btnClear.Text = "Clear";
-            btnClear.ForeColor = Color.FromArgb(65, 63, 73);
+            btnClear.Text = "Clear"; // set name to the clear button
+            btnClear.ForeColor = Color.FromArgb(65, 63, 73); // set colot to the clear button
 
         }
-        private List<string> addToTempList()
+        private List<string> addToTempList(string fileName)
         {
             List<String> temp = new List<String>(); // temporary list
             foreach (string input in File.ReadAllLines(filename)) // loop with words that user added
             {
-                foreach (string word in File.ReadAllLines("1000words.txt"))
+                foreach (string word in File.ReadAllLines(fileName))
                 {
 
                     if (sameChars(input, word)) // if words contain same letters 
@@ -96,7 +97,7 @@ namespace WordUnscrambler
         }
         private void printUnscrambledWords()
         {
-            List<string> li = addToTempList();
+            List<string> li = addToTempList("1000words.txt");
             foreach (string word in li)
             {
                 listAddedWords.Items.Add("\r\n" + word); // display in the list box
@@ -108,6 +109,11 @@ namespace WordUnscrambler
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
