@@ -28,133 +28,156 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManualInput));
-            this.label1 = new System.Windows.Forms.Label();
-            this.enter_words = new System.Windows.Forms.Label();
-            this.input_words = new System.Windows.Forms.TextBox();
-            this.add_word = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.display_words_manual = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.unscrumble_manual = new System.Windows.Forms.Button();
+            this.addManualTxtBox = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.listAddedWords = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnUnscrambleUserInp = new System.Windows.Forms.Button();
+            this.errorAddToList = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(153)))), ((int)(((byte)(201)))));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Manual Input";
-            // 
-            // enter_words
-            // 
-            this.enter_words.AutoSize = true;
-            this.enter_words.Font = new System.Drawing.Font("Candara Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enter_words.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(137)))), ((int)(((byte)(184)))));
-            this.enter_words.Location = new System.Drawing.Point(12, 83);
-            this.enter_words.Name = "enter_words";
-            this.enter_words.Size = new System.Drawing.Size(316, 45);
-            this.enter_words.TabIndex = 2;
-            this.enter_words.Text = "Please enter words";
-            // 
-            // input_words
-            // 
-            this.input_words.BackColor = System.Drawing.Color.White;
-            this.input_words.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.input_words.Location = new System.Drawing.Point(20, 155);
-            this.input_words.Multiline = true;
-            this.input_words.Name = "input_words";
-            this.input_words.Size = new System.Drawing.Size(206, 39);
-            this.input_words.TabIndex = 3;
-            // 
-            // add_word
-            // 
-            this.add_word.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(137)))), ((int)(((byte)(184)))));
-            this.add_word.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.add_word.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_word.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_word.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_word.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(239)))));
-            this.add_word.Location = new System.Drawing.Point(261, 155);
-            this.add_word.Name = "add_word";
-            this.add_word.Size = new System.Drawing.Size(124, 37);
-            this.add_word.TabIndex = 4;
-            this.add_word.Text = "Add";
-            this.add_word.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(401, -35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(498, 364);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // display_words_manual
-            // 
-            this.display_words_manual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(239)))));
-            this.display_words_manual.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.display_words_manual.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.display_words_manual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(137)))), ((int)(((byte)(184)))));
-            this.display_words_manual.FormattingEnabled = true;
-            this.display_words_manual.ItemHeight = 26;
-            this.display_words_manual.Location = new System.Drawing.Point(20, 297);
-            this.display_words_manual.Name = "display_words_manual";
-            this.display_words_manual.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.display_words_manual.Size = new System.Drawing.Size(311, 208);
-            this.display_words_manual.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Candara Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(137)))), ((int)(((byte)(184)))));
-            this.label2.Location = new System.Drawing.Point(12, 227);
+            this.label2.Font = new System.Drawing.Font("OCR A Extended", 15.75F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(73)))));
+            this.label2.Location = new System.Drawing.Point(34, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 45);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Words list";
+            this.label2.Size = new System.Drawing.Size(257, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Please Enter a Word";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // unscrumble_manual
+            // addManualTxtBox
             // 
-            this.unscrumble_manual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(137)))), ((int)(((byte)(184)))));
-            this.unscrumble_manual.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.unscrumble_manual.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.unscrumble_manual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.unscrumble_manual.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unscrumble_manual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(239)))));
-            this.unscrumble_manual.Location = new System.Drawing.Point(401, 387);
-            this.unscrumble_manual.Name = "unscrumble_manual";
-            this.unscrumble_manual.Size = new System.Drawing.Size(141, 36);
-            this.unscrumble_manual.TabIndex = 8;
-            this.unscrumble_manual.Text = "Unscramble";
-            this.unscrumble_manual.UseVisualStyleBackColor = false;
+            this.addManualTxtBox.Font = new System.Drawing.Font("OCR A Extended", 13.75F);
+            this.addManualTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(73)))));
+            this.addManualTxtBox.Location = new System.Drawing.Point(38, 104);
+            this.addManualTxtBox.Multiline = true;
+            this.addManualTxtBox.Name = "addManualTxtBox";
+            this.addManualTxtBox.Size = new System.Drawing.Size(207, 30);
+            this.addManualTxtBox.TabIndex = 7;
+            this.addManualTxtBox.TextChanged += new System.EventHandler(this.addManualTxtBox_TextChanged);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(73)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("OCR A Extended", 13.75F);
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(73)))));
+            this.btnAdd.Location = new System.Drawing.Point(268, 100);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(88, 34);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // listAddedWords
+            // 
+            this.listAddedWords.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.listAddedWords.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listAddedWords.Font = new System.Drawing.Font("OCR A Extended", 15.75F);
+            this.listAddedWords.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(145)))), ((int)(((byte)(151)))));
+            this.listAddedWords.FormattingEnabled = true;
+            this.listAddedWords.ItemHeight = 23;
+            this.listAddedWords.Location = new System.Drawing.Point(38, 294);
+            this.listAddedWords.Name = "listAddedWords";
+            this.listAddedWords.Size = new System.Drawing.Size(259, 184);
+            this.listAddedWords.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("OCR A Extended", 15.75F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(73)))));
+            this.label1.Location = new System.Drawing.Point(34, 257);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 23);
+            this.label1.TabIndex = 10;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnUnscrambleUserInp
+            // 
+            this.btnUnscrambleUserInp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.btnUnscrambleUserInp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUnscrambleUserInp.Font = new System.Drawing.Font("OCR A Extended", 13.75F);
+            this.btnUnscrambleUserInp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(73)))));
+            this.btnUnscrambleUserInp.Location = new System.Drawing.Point(38, 184);
+            this.btnUnscrambleUserInp.Name = "btnUnscrambleUserInp";
+            this.btnUnscrambleUserInp.Size = new System.Drawing.Size(173, 34);
+            this.btnUnscrambleUserInp.TabIndex = 12;
+            this.btnUnscrambleUserInp.Text = "Unscramble";
+            this.btnUnscrambleUserInp.UseVisualStyleBackColor = false;
+            this.btnUnscrambleUserInp.Click += new System.EventHandler(this.btnUnscrambleUserInp_Click);
+            // 
+            // errorAddToList
+            // 
+            this.errorAddToList.AutoSize = true;
+            this.errorAddToList.Font = new System.Drawing.Font("OCR A Extended", 8F);
+            this.errorAddToList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(145)))), ((int)(((byte)(151)))));
+            this.errorAddToList.Location = new System.Drawing.Point(43, 147);
+            this.errorAddToList.Name = "errorAddToList";
+            this.errorAddToList.Size = new System.Drawing.Size(0, 12);
+            this.errorAddToList.TabIndex = 19;
+            this.errorAddToList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.errorAddToList.Click += new System.EventHandler(this.errorAddToList_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("OCR A Extended", 13.75F);
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.btnClear.Location = new System.Drawing.Point(38, 484);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(88, 34);
+            this.btnClear.TabIndex = 21;
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(394, 212);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(286, 306);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // ManualInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(239)))));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(743, 589);
-            this.Controls.Add(this.unscrumble_manual);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.display_words_manual);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(733, 552);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.add_word);
-            this.Controls.Add(this.input_words);
-            this.Controls.Add(this.enter_words);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.errorAddToList);
+            this.Controls.Add(this.btnUnscrambleUserInp);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.listAddedWords);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.addManualTxtBox);
+            this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManualInput";
-            this.Text = "Word Unscrambler";
+            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,13 +186,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label enter_words;
-        private System.Windows.Forms.TextBox input_words;
-        private System.Windows.Forms.Button add_word;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox display_words_manual;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button unscrumble_manual;
+        private System.Windows.Forms.TextBox addManualTxtBox;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ListBox listAddedWords;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnUnscrambleUserInp;
+        private System.Windows.Forms.Label errorAddToList;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
