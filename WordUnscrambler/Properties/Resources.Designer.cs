@@ -69,5 +69,15 @@ namespace WordUnscrambler.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Manrope_VariableFont_wght {
+            get {
+                object obj = ResourceManager.GetObject("Manrope_VariableFont_wght", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
