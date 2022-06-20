@@ -71,7 +71,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 23);
             this.label2.TabIndex = 5;
-            this.label2.Text = "What is it?";
+            this.label2.Text = "What Is It?";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -85,7 +85,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // MenuDisplay
+            // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,7 +95,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MenuDisplay";
+            this.Name = "HomePage";
             this.Text = "Form1";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

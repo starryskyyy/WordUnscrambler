@@ -61,7 +61,7 @@ namespace WordUnscrambler
             listAddedWords.Items.Clear();
             printUnscrambledWords(); // print unscrambled words
             openFileTextBox.Text = "";
-            label1.Text = "Unscrambled words";
+            label1.Text = "Unscrambled Words";
             btnClear.Text = "Clear"; // set name to the clear button
             btnClear.ForeColor = Color.FromArgb(65, 63, 73); // set colot to the clear button
 

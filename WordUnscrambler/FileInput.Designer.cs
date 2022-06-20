@@ -51,7 +51,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(270, 23);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Please select a file";
+            this.label2.Text = "Please Select a File";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnBrowse

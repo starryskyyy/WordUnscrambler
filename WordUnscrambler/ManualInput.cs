@@ -65,7 +65,7 @@ namespace WordUnscrambler
             // clear text box 
             addManualTxtBox.Clear(); // clear textbox
             listAddedWords.Items.Clear(); // clear list box
-            label1.Text = "Unscrambled words";
+            label1.Text = "Unscrambled Words";
             printUnscrambledWords();
             inputList.Clear();
             btnClear.Text = "Clear";

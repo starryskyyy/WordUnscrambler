@@ -100,9 +100,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(63)))), ((int)(((byte)(73)))));
             this.label1.Location = new System.Drawing.Point(361, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 23);
+            this.label1.Size = new System.Drawing.Size(244, 23);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Manage File";
+            this.label1.Text = "Manage Source File";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnDelete
